@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <input type="text" id="rahut" placeholder="รหัสนักศึกษา" >
+    <input type="text" id="fname" placeholder="ชื่อ" >
+    <input type="text" id="lname" placeholder="นามสกุล">
+    <button onclick="add()">ลงทะเบียน</button>
+    <hr/>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col" class="mai">ลำดับที่</th>
+                <th scope="col" class="mai">รหัสนักศึกษา</th>
+                <th scope="col" class="mai">ชื่อ</th>
+                <th scope="col" class="mai">นามสกุล</th>
+            </tr>
+        </thead>
+        <tbody id="addData">
+        </tbody>
+    </table>
+    <script>
+        var order = 0;
+        function createinput(text) {
+            let textV1 = document.createElement("td");
+            let v2 = document.createTextNode(`${text}`);
+            textV1.appendChild(v2)
+            return textV1;
+        }
+        function add() {
+            order++;
+            var elementid = document.getElementById("addData").length
+            let row1 = document.createElement("tr");
+            row1.appendChild(createinput(order))
+            row1.appendChild(createinput(document.getElementById("rahut").value))
+            row1.appendChild(createinput(document.getElementById("fname").value))
+            row1.appendChild(createinput(document.getElementById("lname").value))
+            document.getElementById("addData").appendChild(row1);
+        }
+    </script>
+</body>
+</html>

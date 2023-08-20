@@ -1,0 +1,16 @@
+#markrook{
+    width:80em;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    margin-top: 10px;
+  }
+.box{
+    height: 10em;
+    border: 1px solid black;
+  }
+.black{
+    background-color: black;
+  }
+.while{
+    background-color: white;
+  }

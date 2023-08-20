@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let obj = {
+        "ID":["1","2","3","4","5","6","7","8","9"],
+        "Gender":["Female","Male","Female","Female","male","male","male","Female","Female"],
+        "Lastname":["Davolio","Fuller","Leverling","Peacock","Buchanan","Suyama","King","Callahan","Dodsworth"],
+        "Firstname":["Nancy","Andrew","Janet","Margaret","Steven","Michael","Robert","Laura","Anne"],
+        "Position":["Sales Representative","Vice President, Sales","Sales Representative","Sales Representative","Sales Manager","Sales Representative","Sales Representative","Inside Sales Coordinator","Sales Representative"],
+        "Address":["507 - 20thAve. E. Apt. 2A","908 W. Capital Way","722 Moss Bay Blvd.","4110 Old Redmond Rd.","14 Garrett Hill","Coventry House Miner Rd.","Edgeham Hollow Winchester Way","4726 - 11th Ave. N.E.","7 Houndstooth Rd."]
+    }
+    for (let i = 0; i<9 ; i++){
+        document.write(obj.ID[i]+" "+"<b>"+obj.Firstname[i]+" "+obj.Lastname[i]+"</b>"+"("+obj.Gender[i]+")"+" is a "+obj.Position[i]+","+" "+obj.Address[i]+"<br>");
+    }
+</script>
+

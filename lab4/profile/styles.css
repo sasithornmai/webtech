@@ -1,0 +1,11 @@
+* {
+    font-family: 'Kanit', sans-serif;
+    font-weight: bold;
+}
+.card {
+    background-color: #f8f9fa;
+    padding: 0px;
+    margin-inline: 7px;
+    border: 0;
+    overflow: hidden;
+}

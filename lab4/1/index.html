@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="value1"></div>
+    <div id="value2"></div>
+    <button onclick="cal()">Calculate</button>
+    <div id="value3"></div>
+    <script>
+        let row1, row2, v1, v2, textV1, textV2, res, resText, row3, v3;
+        row1 = document.createElement("p");
+        row2 = document.createElement("p");
+
+        v1 = document.createTextNode("Value 1 : ");
+        v2 = document.createTextNode("Value 2 : ");
+
+        textV1 = document.createElement("input");
+        textV1.setAttribute("id", "inp1");
+
+        textV2 = document.createElement("input");
+        textV2.setAttribute("id", "inp2");
+
+
+        row1.appendChild(v1);
+        row1.appendChild(textV1);
+
+        row2.appendChild(v2);
+        row2.appendChild(textV2);
+
+        document.getElementById("value1").appendChild(row1);
+        document.getElementById("value2").appendChild(row2);
+
+
+
+        row3 = document.createElement("p");
+
+        v3 = document.createTextNode("Result : ");
+
+
+        row3.setAttribute("id", "resulttext");
+
+
+        row3.appendChild(v3)
+        document.getElementById("value3").appendChild(row3);
+
+
+        
+        function cal() {
+            let i1 = document.getElementById("inp1").value;
+            let i2 = document.getElementById("inp2").value;
+            console.log(parseInt(i1)+parseInt(i2));
+            res = document.createElement("p");
+            resText = document.createTextNode(`${i1} + ${i2} = ${parseInt(i1)+parseInt(i2)}`);
+
+            document.getElementById("resulttext").innerHTML = `Result : ${parseInt(i1)+parseInt(i2)}`
+
+
+            res.appendChild(resText);
+            document.body.appendChild(res);
+        }
+    </script>
+</body>
+</html>

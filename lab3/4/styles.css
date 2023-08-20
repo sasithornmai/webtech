@@ -1,0 +1,33 @@
+body {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+.graph {
+    height: 25px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+#one {
+    background-color: rgb(146, 225, 139);
+    width: 70px;
+}
+#two {
+    background-color: rgb(146, 225, 139);
+    width: 70px;
+}
+#three {
+    background-color: rgb(146, 225, 139);
+    width: 70px;
+}
+#four {
+    background-color: rgb(146, 225, 139);
+    width: 70px;
+}
+#five {
+    background-color: rgb(146, 225, 139);
+    width: 70px;
+}

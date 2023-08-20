@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="validator.js"></script>
+</head>
+<body>
+    <div class="grop">
+    <div class="card border-primary mb-3 p-3" style="max-width: 70rem;">
+    <div class="container">
+        <h2>Create your card</h2>
+            <!-- name -->
+            <label for="name" class="mr-3">Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Miss Sasithorn Srijun">
+            <!---->
+            <!-- phone -->
+            <label for="phone" class="mr-3">Phone</label>
+            <input type="tel" class="form-control" id="phone" placeholder="0945847905">
+            <!---->
+            <!-- email -->
+            <label for="email" class="mr-3">E-mail</label>
+            <input type="email" class="form-control" id="email" placeholder="sasithorn@gmail.com">
+            <!---->
+            <!-- company -->
+            <label for="company" class="mr-3">Company</label>
+            <input type="text" class="form-control" id="company" placeholder="Sasithorn Inc.">
+            <!---->
+            <button class="btn btn-primary btn-block" onclick="sumitForm()">Create</button>
+    </div>
+</div>
+<div class="right">
+    <div>your card here</div>
+    <div class="card-create">
+        <div id="name2">---------------------</div>
+        <div id="phone2">----------</div>
+        <div id="email2">------------------------</div>
+        <div id="company2">----------</div>
+        <img src="https://cdn.discordapp.com/attachments/1007662217140895816/1013482000998465536/imgbin_hello-kitty-my-melody-little-twin-stars-sanrio-youtube-png.png" width="100px">
+    </div>
+</div>
+</div>
+</body>
+</html>

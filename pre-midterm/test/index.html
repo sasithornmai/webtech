@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>คำถาม</h2>
+    </div>
+    <div id="ans"></div>
+    <button onclick="check()">submit</button>
+    <script>
+        let requestURL = 'questions.json';
+        let request = new XMLHttpRequest();
+
+        request.onreadystatechange = function () {
+            if (request.readyState == 4 && request.status == 200) {
+                wtf(JSON.parse(request.responseText));
+            }
+        };
+        request.open("GET", requestURL, true);
+        request.send();
+
+        function wtf(data) {
+            for (let i = 0; i < data.length; i++) {
+                let  que = document.createElement("h3");
+                let queTxt = document.createTextNode(data[i].question);
+                que.appendChild(queTxt);
+                document.getElementById('ans').appendChild(que);
+                for (let j = 0; j < 3; j++) {
+                    const lst = ['a', 'b', 'c'];
+                    let div = document.createElement("div");
+                    div.setAttribute("style", "display:flex;");
+                    let option = document.createElement("input");
+                    let text = document.createElement("p");
+                    let text2 = document.createTextNode(data[i].answers[lst[j]]);
+                    option.setAttribute("type", "radio");
+                    option.setAttribute("name", `${i} + ''`);
+                    option.setAttribute("value", data[i].answers[lst[j]]);
+                    option.setAttribute("id", `${i}=${lst[j]}`);
+                    text.appendChild(text2);
+                    div.appendChild(option);
+                    div.appendChild(text);
+                    document.getElementById('ans').appendChild(div);
+                }
+                console.log(data[i].question);
+            }
+        }
+        function check() {
+            for (let i = 0; i < num; i++)
+            console.log(document.getElementById(`${i}=a`).checked);
+            console.log(document.getElementById(`${i}=b`).checked);
+            console.log(document.getElementById(`${i}=c`).checked);
+        }
+    </script>
+</body>
+</html>

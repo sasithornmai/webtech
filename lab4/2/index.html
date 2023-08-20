@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc</title>
+    <style>
+        p {
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="display:flex">
+            <div id="name"><p id="name2">ชื่อ : </p></div>
+            <input type="text" class="form-control">
+        </div>
+        <br>
+        <div style="display:flex">
+            <div id="lsn"><p id="lsn2">นามสกุล : </p></div>
+            <input type="text" class="form-control">
+        </div>
+        <br>
+        <div style="display:flex">
+            <div id="country"><p id="country2">ประเทศ : </p></div>
+            <select id="select" class="form-controlselect" aria-label="Default select example">
+                <option id="1" selected>เลือกประเทศ</option>
+                <option id="2" value="1">ไทย</option>
+                <option id="3" value="2">เวียดนาม</option>
+                <option id="4" value="3">ลาว</option>
+                <option id="5" value="3">มาเลเซีย</option>
+                <option id="6" value="3">สิงค์โปร</option>
+                <option id="7" value="3">ฟิลิปปินส์</option>
+                <option id="8" value="3">เมียนมา</option>
+                <option id="9" value="3">กัมพูชา</option>
+                <option id="10" value="3">บรูไน</option>
+              </select>
+        </div>
+        <br>
+        <button type="button" onclick="change()" id="btn"><p id="btn2">เปลี่ยนเป็นภาษาอังกฤษ</p></button>
+    </div>
+</body>
+</html>
+<script>
+    let ans = 1
+    let total = ["เลือกภาษา", "ไทย", "เวียดนาม", "ลาว", " มาเลย์เซีย", "สิงคโปร์", "ฟิลิปปินส์", "เมียนมาร์", "กัมพูชา", "บรูไน"]
+    let total2 = ["select language", "Thailand", "Vietnam", "Laos", "Malaysia", "Singapore", "Philippines", "Myanmar", "Cambodia", "Brunei"]
+
+    function change(){
+        if (ans == 1){
+            for(let i = 1; i <= total2.length; i++){
+                document.getElementById(`${i}`).innerHTML = total2[i-1]
+            }
+            let name = document.createElement("p")
+            let fname = document.createTextNode("First Name : ")
+            name.appendChild(fname)
+            document.getElementById("name").appendChild(name)
+            const deletename = document.getElementById("name");
+            deletename.removeChild(deletename.firstElementChild);
+
+            let lastname = document.createElement("p")
+            let lname = document.createTextNode("Last Name : ")
+            lastname.appendChild(lname)
+            document.getElementById("lsn").appendChild(lastname)
+            const deletelname = document.getElementById("lsn");
+            deletelname.removeChild(deletelname.firstElementChild);
+
+            let country = document.createElement("p")
+            let cnt = document.createTextNode("Country : ")
+            country.appendChild(cnt)
+            document.getElementById("country").appendChild(country)
+            const deletecountry = document.getElementById("country");
+            deletecountry.removeChild(deletecountry.firstElementChild);
+
+            let button = document.createElement("p")
+            let button2 = document.createTextNode("Change to Thai")
+            button.appendChild(button2)
+            document.getElementById("btn").appendChild(button)
+            const deletebutton = document.getElementById("btn");
+            deletebutton.removeChild(deletebutton.firstElementChild);
+
+            ans = 2
+        }
+        else{
+            for(let i = 1; i <= total.length; i++){
+                document.getElementById(`${i}`).innerHTML = total[i-1]
+            }
+            let name = document.createElement("p")
+            let fname = document.createTextNode("ชื่อ : ")
+            name.appendChild(fname)
+            document.getElementById("name").appendChild(name)
+            const deletename = document.getElementById("name");
+            deletename.removeChild(deletename.firstElementChild);
+
+            let lastname = document.createElement("p")
+            let lname = document.createTextNode("นามสกุล : ")
+            lastname.appendChild(lname)
+            document.getElementById("lsn").appendChild(lastname)
+            const deletelname = document.getElementById("lsn");
+            deletelname.removeChild(deletelname.firstElementChild);
+
+            let country = document.createElement("p")
+            let cnt = document.createTextNode("ประเทศ : ")
+            country.appendChild(cnt)
+            document.getElementById("country").appendChild(country)
+            const deletecountry = document.getElementById("country");
+            deletecountry.removeChild(deletecountry.firstElementChild);
+
+            let button = document.createElement("p")
+            let button2 = document.createTextNode("เปลี่ยนเป็นภาษาอังกฤษ")
+            button.appendChild(button2)
+            document.getElementById("btn").appendChild(button)
+            const deletebutton = document.getElementById("btn");
+            deletebutton.removeChild(deletebutton.firstElementChild);
+            ans = 1
+        }
+    }
+</script>

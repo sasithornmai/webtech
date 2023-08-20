@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+        * {
+          box-sizing:border-box;
+          font-family: 'Varela Round', sans-serif;
+          position: relative;
+        }
+        .left {
+            padding: 20px;
+        }
+        .main {
+            padding: 20px;
+            padding-top: 35px;
+        }
+        .right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .head{
+            background-color: rgb(255, 0, 208);
+            height: 150px;
+            display: flex;
+            font-size: larger;
+        }
+        .foot {
+            background-color: rgb(255, 0, 208);
+            height: 70px;
+        }
+        .foot h2 {
+            font-size: 16px;
+            margin: 0;
+        }
+        .left, .right, .head, .foot {
+            position: relative;
+        }
+        .tag {
+            background-color: white;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-link {
+            height: 50px;
+            background-color: rgb(255, 0, 208);
+            width: 100%;
+            margin-top: 20px;
+            color:white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3em;
+        }
+        li {
+            list-style: none;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        @media screen and (max-width:620px) {
+            .left, .right, .main, .head, .foot {
+                flex: 100%;
+                max-width: 100%;
+            }
+            .left {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 50px;
+                background-color: rgb(255, 0, 208);
+                padding: 0;
+                width: 100%;
+                z-index: 100;
+            }
+            .nav-link {
+                background-color: rgb(255, 0, 208);
+                /* padding: 0px; */
+                margin: 0;
+                padding: 0;
+            }
+           .head{
+                position: relative;
+                margin-top: 50px;
+           }
+           .foot {
+                min-height: 70px;
+           }
+           ul {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-around;
+           }
+           a {
+            padding: 0;
+            width: 100%;
+           }
+           .nav {
+            width: 100%;
+           }
+        }   
+    </style>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="head col-12 d-flex flex-column justify-content-center align-items-center text-white">
+                <h2>WORLD OF BARBIE</h2>
+                <h4 class="tag text-dark px-4">DREAMS MADE HERE</h4>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="left col-2">
+                <nav class="nav justify-content-center">
+                    <ul>
+                        <li>
+                            <a class="nav-link" href="#">Fairytopia</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Mermaidia</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Nutcracker</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Swan Lake</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="main col-7">
+                <p>Consectetur amet aliquip sint sit in non. Sunt laborum anim labore aliqua dolore amet sit aliqua laborum cupidatat ex non esse reprehenderit. Aliqua eu exercitation cillum voluptate ullamco cupidatat Lorem in ea occaecat. Eiusmod irure dolore esse cillum ad sunt cillum dolore amet nisi nulla. Officia dolore consequat reprehenderit esse do id. Nulla cupidatat et labore Lorem reprehenderit consequat dolore esse. Nostrud sint ipsum qui incididunt anim culpa in qui.
+
+Commodo do elit tempor sint pariatur esse veniam laborum voluptate eiusmod voluptate excepteur non. Culpa ipsum ut non culpa deserunt tempor fugiat duis officia incididunt Lorem est. Exercitation cillum voluptate labore est Lorem reprehenderit minim incididunt fugiat eu ea id tempor ipsum. Reprehenderit minim consequat ad ullamco anim sunt in dolor nisi nostrud mollit. Enim ad do tempor anim esse consectetur ullamco labore quis voluptate non mollit. Nostrud officia eu in velit Lorem dolore enim voluptate enim laborum eiusmod consequat labore fugiat. Veniam magna do nulla nostrud in.
+
+Reprehenderit ex elit est velit nulla duis et sunt exercitation quis veniam. Lorem ad reprehenderit irure fugiat sint eiusmod ut. Veniam mollit in ipsum consectetur aliqua exercitation qui ad velit aliquip est enim. Aute ipsum in Lorem eiusmod irure veniam aliquip duis laboris sit nulla quis consectetur. Consequat eiusmod ut consequat voluptate et tempor anim excepteur proident reprehenderit adipisicing. Officia occaecat sunt adipisicing exercitation mollit mollit.
+
+Sint anim adipisicing commodo cupidatat ut laboris voluptate esse. Occaecat sit do nisi ea fugiat ea exercitation in quis anim aliquip velit do. Aliquip mollit elit anim voluptate labore cillum est anim est reprehenderit ea aliquip reprehenderit id.</p>
+            </div>
+            <div class="right col-3">
+                <img height="450px" src="https://backend.central.co.th/media/catalog/product/C/D/CDS18004908_x4.jpg" style="max-width:100%;height:auto;"/>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="foot col-12 d-flex flex-column justify-content-center align-items-center text-white">
+                <h2>At World of Barbie, discover, explore, and revel in her lifestyle and many careers.</h2>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
